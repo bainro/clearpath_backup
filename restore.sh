@@ -9,7 +9,7 @@
 USERNAME=administrator
 
 # the version of _this_ script
-VERSION=2.0.2
+VERSION=2.0.1
 
 RED='\033[0;31m'
 NC='\033[0m' # No Color
@@ -190,7 +190,7 @@ then
   else
     echo "Skipping /etc/hosts; no backup"
   fi
-  if [ -d iptables ];
+  if [ -f iptables ];
   then
     echo "Restoring iptables"
     sudo cp -r iptables/. /etc/iptables
