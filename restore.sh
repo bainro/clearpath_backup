@@ -190,7 +190,7 @@ then
   else
     echo "Skipping /etc/hosts; no backup"
   fi
-  if [ -f iptables ];
+  if [ -d iptables ] || [ -f iptables ];
   then
     echo "Restoring iptables"
     sudo cp -r iptables/. /etc/iptables
